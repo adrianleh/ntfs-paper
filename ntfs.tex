@@ -1,0 +1,50 @@
+
+\documentclass[10pt,twocolumn,letter]{article}
+\usepackage{styles/usenix-style}
+\usepackage[american]{babel}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%\usepackage{styles/ieee-style}
+
+\author{Adrian E. Lehmann}
+%\affiliation{System Architecture Group\\ University of Karlsruhe, Germany}
+%\email{\{name1,name2\}@ira.uka.de}
+
+%%%%%%%%%%%%%%%%%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[draft]{styles/ka-style}
+\usepackage{cite,xspace,ifthen,graphicx,listings}
+\usepackage[draft]{styles/ka-style}
+\usepackage[super]{nth}
+\usepackage{theorem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{varwidth}
+\usepackage{float}
+
+\usepackage[
+   pdfauthor={Adrian E. Lehmann},
+   pdftitle={NTFS},
+   pdfsubject={Windows Internal Introductory Seminar},
+   pdfkeywords={Filesystem, Windows}
+]{hyperref}
+
+\begin{document}
+
+\title{New Technology File System (NTFS)}
+\newcommand{\todo}[1]{{\texttt{[#1]}}}
+\newcommand{\code}[1]{{\tt \small{#1}}}
+
+\maketitle
+%\draftfooter
+
+\input{Abstract}
+\input{Introduction}
+\input{Clustering}
+
+
+\bibliographystyle{abbrv}
+\bibliography{ntfs}
+%\footnotesize
+\end{document}
