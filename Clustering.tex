@@ -1,5 +1,6 @@
 % !TeX root = ntfs.tex
 \section{Addressing Storage: Clustering}
+\label{sec:Cluster}
 Before we can begin to organize files, we first need to be able to manage the available space. In order to divide up the storage medium NTFS has devised a system called Clustering.
 
 The basic idea of clustering is to divide up the storage medium into contiguous parts, called \textit{clusters}. These clusters are made up of $2^n, n \in \mathbb{N}$\cite{microsoftinc:2018:DCS} sectors (areas usually sized $512$ Bytes) on a storage device and hence abstract from the physical layout. When formatting a volume the size of clusters can be set, but it cannot be changed afterwards (without formatting again).\\
@@ -11,7 +12,7 @@ In figures \ref{fig:internal_frag_16} and \ref{fig:internal_frag_4} this is illu
 \begin{figure}[H]
 	\centering
 	\fbox{
-		\resizebox {0.9\columnwidth} {!} {
+		\resizebox {0.95\columnwidth} {!} {
 			\begin{tikzpicture}[scale=1]
 				\filldraw [fill=SpringGreen, draw=black] (0,0) rectangle +(1,2);
 				\filldraw [fill=white, draw=black] (1,0) rectangle +(7,2);
@@ -29,7 +30,7 @@ In figures \ref{fig:internal_frag_16} and \ref{fig:internal_frag_4} this is illu
 \begin{figure}[H]
 	\centering
 	\fbox{
-		\resizebox {0.9\columnwidth} {!} {
+		\resizebox {0.95\columnwidth} {!} {
 			\begin{tikzpicture}[scale=1]
 				\filldraw [fill=SpringGreen, draw=black] (0,0) rectangle +(4,2);
 				\filldraw [fill=white, draw=black] (4,0) rectangle +(4,2);
@@ -47,6 +48,7 @@ In figures \ref{fig:internal_frag_16} and \ref{fig:internal_frag_4} this is illu
 By default Microsoft has set the cluster size for usual desktop storage capacities (2GB - 16TB) to $4$ KiB \cite{microsoftinc:2018:DCS}. For larger storage needs the default cluster size is $>4$ KiB, as one would usually not worry about internal fragmentation that much, but having faster access speeds is very important.
 
 \subsection{Virtual and Logical Clusters}
+\label{sec:Cluster:CN}
 Now that we have established that clusters are just some unit of memory that addressed lets look at how the addressing works. \\
 For this we will now need to distinguish between Logical and Virtual clusters:
 \begin{itemize}
