@@ -12,9 +12,9 @@
 %\email{adrian.lehmann@student.kit.edu}
 
 %%%%%%%%%%%%%%%%%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[draft]{styles/ka-style}
+%\usepackage[draft]{styles/ka-style}
 \usepackage{cite,xspace,ifthen,graphicx,listings}
-\usepackage[draft]{styles/ka-style}
+%\usepackage[draft]{styles/ka-style}
 \usepackage[super]{nth}
 \usepackage{theorem}
 \usepackage[dvipsnames,table]{xcolor}
@@ -41,7 +41,8 @@
 \title{New Technology File System (NTFS)}
 \newcommand{\todo}[1]{{\texttt{[#1]}}}
 \newcommand{\code}[1]{{\tt \small{#1}}}
-
+\newcommand{\bplus}{B\textsuperscript{+}}
+\newcommand{\logn}{$\mathcal{O}(\log{}n)$}
 \maketitle
 %\draftfooter
 
@@ -49,6 +50,8 @@
 \input{Introduction}
 \input{Clustering}
 \input{MFT}
+\input{Recovery}
+\input{Summary}
 
 \bibliographystyle{abbrv}
 \bibliography{ntfs}
