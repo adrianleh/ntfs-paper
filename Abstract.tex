@@ -1,6 +1,6 @@
 % !TeX root = ntfs.tex
 \begin{abstract}
 The New Technology File System (NTFS) provides a reliable way to store and organize files. In order to accomplish this it divides up the disk into small units called ``Clusters'' which can be individually addressed.\\
-To organize files and  directories NTFS has a big table index structure called the Master File Table (MFT). This table stores or references all the (meta-)data of a given file. Directories are stored just like files only that the data they contain is references to files and directories.\\
-For the case of a system crash NTFS has further devised a system called ``Journaling'' that logs all the changes  to the drive and ensures these changes are stored fully completed on the disk in case of such a crash.
+To organize files and  directories NTFS has a big table index structure called the Master File Table (MFT). This table stores or references all the \mbox{(meta-)data} of a given file. Directories are stored just like files only that the data they contain is references to files and directories.\\
+For the case of a system crash NTFS further uses a system called ``Journaling'' that logs all the changes  to the drive and ensures these changes are stored fully completed on the disk in case of such a crash.
 \end{abstract}
