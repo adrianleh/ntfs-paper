@@ -1,2 +1,4 @@
 % !TeX root = ntfs.tex
 \section{Conclusion}
+Modern operating systems need to be able to cope with the ever growing need of storing data. With the \textit{New Technology File  System} Windows can address this problem, by providing a dynamic, scalable and crash-tolerant system for storing and organizing data.
+In order to address data on the volume, sectors are grouped into \textit{clusters}, which can then be uniquely referenced. The \textit{Master File Table} stores data and metadata on files, such as the filename, size, and the actual data or references to it. The MFT is organized into a tree structure to represent the file structures a user would employ. In order to be resilient against crashes, NTFS records groups of operations (\textit{transactions}) in a \textit{journal} and will analyze, undo and redo faulty transactions, such that consistency is ensured, as an otherwise corrupt file-system would likely cause data loss to the user.
